@@ -1,0 +1,9 @@
+
+<%- include("partials/header.ejs") %> 
+   <h1><%= post.title %></h1>
+   <p><%= post.content %></p>
+   <p><a href="/edit/<%= post.id %>">Edit this blog</a></p>
+   <form action="/delete/<%= post.id %>" method="POST">
+       <button type="submit">Delete this blog</button>
+   </form>
+ <%- include("partials/footer.ejs") %> 
